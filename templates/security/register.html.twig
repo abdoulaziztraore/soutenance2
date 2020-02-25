@@ -1,0 +1,35 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Register{% endblock %}
+
+{% block body %}
+
+    <div class="container">
+        <h1>Inscription</h1>
+        {{ form_start(registrationForm) }}
+        <div class="row"> <!-- row cree un tableau -->
+            <div class="col-md-4">  <!-- col cree dans le tableau une case de dimension -->
+                {{ form_row(registrationForm.firstname) }}
+            </div>
+            <div class="col-md-4">  <!-- col cree dans le tableau une case de dimension -->
+                {{ form_row(registrationForm.lastname) }}
+            </div>
+            <div class="col-md-4">  <!-- col cree dans le tableau une case de dimension -->
+                {{ form_row(registrationForm.email) }}
+            </div>
+            <div class="col-md-4">  <!-- col cree dans le tableau une case de dimension ici je dois modifier-->
+                {{ form_row(registrationForm.profile) }}
+            </div>
+            <div class="col-md-4">  <!-- col cree dans le tableau une case de dimension ici je dois modifier-->
+                {{ form_row(registrationForm.password) }}
+            </div>
+            <div class="col-md-8">
+                    <button class="btn btn-primary">s'inscrire</button>
+            </div>
+        </div>
+     {{ form_end(registrationForm) }}
+    </div> 
+
+    
+{% endblock %}
+
