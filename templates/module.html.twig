@@ -1,0 +1,28 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Register{% endblock %}
+
+{% block body %}
+
+    <div class="container">
+        <h1>Ajout de module</h1>
+        {{ form_start(moduleForm) }}
+        <div class="row"> <!-- row cree un tableau -->
+            <div class="col-md-4">  <!-- col cree dans le tableau une case de dimension -->
+                {{ form_row(moduleForm.nom) }}
+            </div>
+            <div class="col-md-4">  <!-- col cree dans le tableau une case de dimension -->
+                {{ form_row(moduleForm.mention) }}
+            </div>
+        
+                    <button class="btn btn-primary">Ajouter</button>
+            </div>
+        </div>
+     {{ form_end(moduleForm) }}
+    </div> 
+
+    
+{% endblock %}
+
+
+
